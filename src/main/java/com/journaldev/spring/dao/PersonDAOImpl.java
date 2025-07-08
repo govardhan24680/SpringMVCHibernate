@@ -40,9 +40,9 @@ public class PersonDAOImpl implements PersonDAO {
 	public List<Person> listPersons() {
 		Session session = this.sessionFactory.getCurrentSession();
 		List<Person> personsList = session.createQuery("from Person").list();
-		for(Person p : personsList){
-			logger.info("Person List::"+p);
-		}
+//		for(Person p : personsList){
+//			logger.info("Person List::"+p);
+//		}
 		return personsList;
 	}
 

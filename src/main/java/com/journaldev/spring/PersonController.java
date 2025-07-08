@@ -27,10 +27,10 @@ public class PersonController {
 	
 	@RequestMapping(value = "/persons", method = RequestMethod.GET)
 	public String listPersons(Model model) {
-		model.addAttribute("person", new Person());
+		model.addAttribute("person", new Person()); //for display form as empty values
 		List<Person> listBox = this.personService.listPersons();
 		model.addAttribute("listPersons", listBox);
-		return "person";
+		return "person"; 
 	}
 	
 	//For add and update person both
