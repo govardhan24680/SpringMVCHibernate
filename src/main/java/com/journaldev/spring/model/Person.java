@@ -14,7 +14,7 @@ import javax.persistence.Table;
  *
  */
 @Entity
-@Table(name="PERSON")
+@Table(name="PERSON")  //spring_hibernate.spring_hibernate.person
 public class Person {
 
 	@Id

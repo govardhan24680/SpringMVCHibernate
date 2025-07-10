@@ -62,5 +62,14 @@ public class PersonController {
         model.addAttribute("listPersons", this.personService.listPersons());
         return "person";
     }
+    
+    
+ 
+        @RequestMapping("/")
+        public String home(Model model) {
+            model.addAttribute("person", new Person());
+            return "person"; 
+        }
+    
 	
 }
