@@ -44,7 +44,7 @@ public class PersonController {
 			//existing person, call update
 			this.personService.updatePerson(p);
 		}
-		
+		this.personService.listPersonsForTestAop();
 		return "redirect:/persons";
 		
 	}

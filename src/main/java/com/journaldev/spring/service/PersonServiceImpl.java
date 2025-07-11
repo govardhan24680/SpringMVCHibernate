@@ -20,7 +20,9 @@ public class PersonServiceImpl implements PersonService {
 	@Override
 	@Transactional
 	public void addPerson(Person p) {
+	
 		this.personDAO.addPerson(p);
+		
 	}
 
 	@Override
@@ -33,6 +35,7 @@ public class PersonServiceImpl implements PersonService {
 	@Transactional
 	public List<Person> listPersons() {
 		List<Person> box = this.personDAO.listPersons();
+		
 		return box;
 	}
 
@@ -45,7 +48,18 @@ public class PersonServiceImpl implements PersonService {
 	@Override
 	@Transactional
 	public void removePerson(int id) {
+		//----start time
 		this.personDAO.removePerson(id);
+		//---end time
+		
+		//time taken method = //endtime-starttime = 
 	}
+	
+	@Override
+	public void listPersonsForTestAop() {
+		String test = null;
+		test.length();
+	}
+
 
 }
